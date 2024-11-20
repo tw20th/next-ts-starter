@@ -1,39 +1,29 @@
-// src/app/page.tsx
-"use client"; // クライアントコンポーネント指示
-
-import React, { useEffect, useState } from 'react';
-import Card from '@/components/Card';
-
-interface Article {
-  id: number;
-  title: string;
-  body: string;
-}
+import React from 'react';
+import Card from '../components/Card';
 
 const HomePage = () => {
-  const [articles, setArticles] = useState<Article[]>([]);
+    const articles = [
+        { title: '記事タイトル1', description: '説明1', imageUrl: '/path/to/image1.jpg' },
+        { title: '記事タイトル2', description: '説明2', imageUrl: '/path/to/image2.jpg' },
+        { title: '記事タイトル3', description: '説明3', imageUrl: '/path/to/image3.jpg' },
+        // 他のダミー記事を追加
+    ];
 
-  useEffect(() => {
-    // 仮のAPIから記事データを取得
-    const fetchArticles = async () => {
-      const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-      const data = await response.json();
-      setArticles(data.slice(0, 5)); // 最初の5件を表示
-    };
-    
-    fetchArticles();
-  }, []);
-
-  return (
-    <main className="container">
-      <h1>Welcome to My Blog</h1>
-      <div className="grid-container">
-        {articles.map((article) => (
-          <Card key={article.id} title={article.title} description={article.body} />
-        ))}
-      </div>
-    </main>
-  );
+    return (
+        <main className="container mx-auto p-4">
+            <h1 className="text-2xl font-bold mb-6">ブログホームページ</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {articles.map((article, index) => (
+                    <Card
+                        key={index}
+                        title={article.title}
+                        description={article.description}
+                        imageUrl={article.imageUrl}
+                    />
+                ))}
+            </div>
+        </main>
+    );
 };
 
 export default HomePage;

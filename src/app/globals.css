@@ -1,11 +1,11 @@
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+/* グローバルスタイル、カスタムフォント、全体のボックスサイズ設定など */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+body {
+    margin: 0;
+    font-family: 'YourCustomFont', sans-serif;
 }
