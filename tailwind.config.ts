@@ -2,9 +2,10 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}", // ページファイル
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}", // コンポーネント
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}", // アプリディレクトリ
+    "./src/**/*.{html,js}", // 追加: 必要に応じたHTMLやJS
   ],
   theme: {
     extend: {
