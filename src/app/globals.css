@@ -1,29 +1,56 @@
-body {
-  background-color: var(--base, #fefbf6);
-  font-family: 'Open Sans', sans-serif;
-  color: var(--textGray, #4a4a4a);
+/* リセット */
+html, body {
   margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--background, #f9f7f6);
+  color: var(--textPrimary, #333333);
   line-height: 1.6;
+  width: 100%; /* 全幅制御 */
+  height: 100%; /* 全高制御 */
+  box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* 見出しのスタイル */
+h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
-  color: #333;
   margin-bottom: 1rem;
 }
 
+/* リンクのスタイル */
 a {
+  color: var(--accent, #f7c8d2);
   text-decoration: none;
-  color: #333;
 }
 
 a:hover {
-  color: var(--textGray, #4a4a4a);
+  text-decoration: underline;
 }
 
+/* コンテナの中央揃えと余白 */
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
+  margin: 0 auto; /* 中央揃え */
+  padding: 1rem; /* 全体の余白 */
 }
 
+/* グリッドレイアウト用 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自動で列を調整 */
+  gap: 1.5rem; /* カード間の隙間 */
+}
+
+/* カードの基本スタイル */
+.card {
+  background-color: var(--cardBg, #ffffff);
+  border-radius: 16px; /* カードの角丸 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* カードの影 */
+  overflow: hidden; /* 内容のオーバーフローを防ぐ */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* アニメーション */
+}
+
+.card:hover {
+  transform: scale(1.05); /* ホバー時に拡大 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* ホバー時の影 */
+}

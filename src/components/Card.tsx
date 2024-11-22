@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({ title, description, imageUrl }) => {
             <Image 
                 src={imageUrl} 
                 alt={title} 
-                width={400} // 適切な幅を指定
+                width={200} // 適切な幅を指定
                 height={200} // 適切な高さを指定
                 layout="responsive"
             />

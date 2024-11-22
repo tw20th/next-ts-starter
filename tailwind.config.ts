@@ -9,21 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        base: "#fefbf6", // ベース背景
-        cardBlue: "#d8ebf2",
-        cardPink: "#fbe3e8",
-        cardYellow: "#fef3d8",
-        textGray: "#4a4a4a",
-      },
-      fontFamily: {
-        heading: ["Playfair Display", "serif"],
-        body: ["Open Sans", "sans-serif"],
-      },
-      boxShadow: {
-        card: "0 4px 8px rgba(0, 0, 0, 0.1)", // カード用の柔らかい影
+        background: "#f9f7f6", // 背景色
+        cardBg: "#ffffff", // カード背景
+        cardShadow: "rgba(0, 0, 0, 0.1)", // カード影
+        textPrimary: "#333333", // 主な文字色
+        accent: "#f7c8d2", // アクセントカラー
       },
       borderRadius: {
-        card: "12px", // カードの角丸
+        card: "16px", // カードの丸み
+      },
+      boxShadow: {
+        card: "0 4px 8px rgba(0, 0, 0, 0.1)", // カードの影
+        cardHover: "0 8px 16px rgba(0, 0, 0, 0.15)", // ホバー時の影
       },
     },
   },
