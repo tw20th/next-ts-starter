@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
+import forms from "@tailwindcss/forms";
+import typography from "@tailwindcss/typography";
 
-export default {
+const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,10 +11,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#f9f9f9", // デフォルトの背景色
+        foreground: "#333", // デフォルトの文字色
+        primary: "#3498db", // プライマリカラー
+        secondary: "#2ecc71", // セカンダリカラー
+        danger: "#e74c3c", // エラーカラー
+      },
+      spacing: {
+        18: "4.5rem", // カスタム余白
+        22: "5.5rem",
+      },
+      borderRadius: {
+        xl: "1rem", // カスタム角丸
+      },
+      boxShadow: {
+        custom: "0 4px 6px rgba(0, 0, 0, 0.1)", // カスタム影
       },
     },
   },
-  plugins: [],
-} satisfies Config;
+  plugins: [forms, typography],
+};
+
+export default config;

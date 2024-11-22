@@ -1,4 +1,4 @@
-/* グローバルスタイル、カスタムフォント、全体のボックスサイズ設定など */
+/* 全体のリセット */
 *,
 *::before,
 *::after {
@@ -7,5 +7,27 @@
 
 body {
     margin: 0;
-    font-family: 'YourCustomFont', sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background, #f9f9f9);
+    color: var(--foreground, #333);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary, #3498db);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary, #2ecc71);
+}
+
+header, footer {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
