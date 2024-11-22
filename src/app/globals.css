@@ -1,33 +1,29 @@
-/* 全体のリセット */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+body {
+  background-color: var(--base, #fefbf6);
+  font-family: 'Open Sans', sans-serif;
+  color: var(--textGray, #4a4a4a);
+  margin: 0;
+  line-height: 1.6;
 }
 
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: var(--background, #f9f9f9);
-    color: var(--foreground, #333);
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
 a {
-    text-decoration: none;
-    color: var(--primary, #3498db);
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #333;
 }
 
 a:hover {
-    color: var(--secondary, #2ecc71);
-}
-
-header, footer {
-    width: 100%;
+  color: var(--textGray, #4a4a4a);
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
+

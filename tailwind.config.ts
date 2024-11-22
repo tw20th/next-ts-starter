@@ -1,6 +1,4 @@
 import type { Config } from "tailwindcss";
-import forms from "@tailwindcss/forms";
-import typography from "@tailwindcss/typography";
 
 const config: Config = {
   content: [
@@ -11,25 +9,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#f9f9f9", // デフォルトの背景色
-        foreground: "#333", // デフォルトの文字色
-        primary: "#3498db", // プライマリカラー
-        secondary: "#2ecc71", // セカンダリカラー
-        danger: "#e74c3c", // エラーカラー
+        base: "#fefbf6", // ベース背景
+        cardBlue: "#d8ebf2",
+        cardPink: "#fbe3e8",
+        cardYellow: "#fef3d8",
+        textGray: "#4a4a4a",
       },
-      spacing: {
-        18: "4.5rem", // カスタム余白
-        22: "5.5rem",
-      },
-      borderRadius: {
-        xl: "1rem", // カスタム角丸
+      fontFamily: {
+        heading: ["Playfair Display", "serif"],
+        body: ["Open Sans", "sans-serif"],
       },
       boxShadow: {
-        custom: "0 4px 6px rgba(0, 0, 0, 0.1)", // カスタム影
+        card: "0 4px 8px rgba(0, 0, 0, 0.1)", // カード用の柔らかい影
+      },
+      borderRadius: {
+        card: "12px", // カードの角丸
       },
     },
   },
-  plugins: [forms, typography],
+  plugins: [],
 };
 
 export default config;
