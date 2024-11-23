@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import './globals.css';
+import './globals.css'; // グローバルCSSのインポート
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (

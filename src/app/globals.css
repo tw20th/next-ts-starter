@@ -15,6 +15,7 @@ html, body {
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
   margin-bottom: 1rem;
+  color: var(--textPrimary, #333333);
 }
 
 /* リンクのスタイル */
@@ -44,13 +45,13 @@ a:hover {
 /* カードの基本スタイル */
 .card {
   background-color: var(--cardBg, #ffffff);
-  border-radius: 16px; /* カードの角丸 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* カードの影 */
+  border-radius: var(--borderRadiusCard, 16px); /* カードの角丸 */
+  box-shadow: var(--boxShadowCard, 0 4px 8px rgba(0, 0, 0, 0.1)); /* カードの影 */
   overflow: hidden; /* 内容のオーバーフローを防ぐ */
   transition: transform 0.2s ease, box-shadow 0.2s ease; /* アニメーション */
 }
 
 .card:hover {
   transform: scale(1.05); /* ホバー時に拡大 */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* ホバー時の影 */
+  box-shadow: var(--boxShadowCardHover, 0 8px 16px rgba(0, 0, 0, 0.15)); /* ホバー時の影 */
 }
