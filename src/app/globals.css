@@ -22,10 +22,12 @@ h1, h2, h3, h4 {
 a {
   color: var(--accent, #f7c8d2);
   text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
 a:hover {
   text-decoration: underline;
+  color: var(--accentHover, #ff99aa);
 }
 
 /* グリッドコンテナ */
@@ -40,6 +42,7 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
+  align-items: start;
 }
 
 /* カードスタイル */
@@ -48,12 +51,13 @@ a:hover {
   border-radius: var(--borderRadiusCard, 16px);
   box-shadow: var(--boxShadowCard, 0 4px 8px rgba(0, 0, 0, 0.1));
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.2s;
 }
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: var(--boxShadowCardHover, 0 8px 12px rgba(0, 0, 0, 0.2));
+  box-shadow: var(--boxShadowCardHover, 0 8px 16px rgba(0, 0, 0, 0.2));
+  background-color: var(--cardHoverBg, #f3f3f3);
 }
 
 .card img {
@@ -62,17 +66,41 @@ a:hover {
   object-fit: cover;
 }
 
+/* カードコンテンツ */
 .card-content {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .card-title {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 8px;
+  color: var(--textPrimary, #333333);
 }
 
 .card-description {
   font-size: 0.875rem;
-  color: #555;
+  color: var(--textSecondary, #555555);
+}
+
+/* メディアクエリ */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .card {
+    border-radius: 12px;
+  }
+
+  .card-title {
+    font-size: 1.125rem;
+  }
+
+  .card-description {
+    font-size: 0.8rem;
+  }
 }

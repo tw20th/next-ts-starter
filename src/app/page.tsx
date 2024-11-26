@@ -3,9 +3,9 @@ import Card from '../components/Card';
 
 const HomePage: React.FC = () => {
   const articles = [
-    { title: '記事タイトル1', description: '説明1' },
-    { title: '記事タイトル2', description: '説明2' },
-    { title: '記事タイトル3', description: '説明3' },
+    { title: '記事タイトル1', description: '説明1', color: '#FFB6C1' },
+    { title: '記事タイトル2', description: '説明2', color: '#ADD8E6' },
+    { title: '記事タイトル3', description: '説明3', color: '#FFD700' },
   ];
 
   return (
@@ -17,6 +17,7 @@ const HomePage: React.FC = () => {
             key={index}
             title={article.title}
             description={article.description}
+            color={article.color}
           />
         ))}
       </div>
